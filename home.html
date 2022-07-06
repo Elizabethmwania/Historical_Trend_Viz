@@ -1,16 +1,132 @@
 <html lang="en">
 
 <head>
+    <script src="script.js"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Test</title>
+    <style>
+        .body {
+            padding: 0;
+            margin: 0;
+
+        }
+
+        .Flex-container {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .rectangle1 {
+
+            position: absolute;
+            width: 256px;
+            height: 100%;
+            left: 10px;
+            top: 0px;
+            right: 10px;
+            background: #F7F8FD;
+        }
+
+        .data {
+            position: absolute;
+            width: 136px;
+            height: 33px;
+            left: 15px;
+            top: 10px;
+
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 22px;
+            line-height: 33px;
+            /* identical to box height */
+            color: #51459E;
+        }
+
+        .search {
+            position: absolute;
+            width: 119px;
+            height: 18px;
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;
+            /* identical to box height */
+            left: 15px;
+            top: 53px;
+            background: #FFFFFF;
+            border-radius: 5px;
+
+        }
+
+        .list-container {
+            position: absolute;
+            width: 226px;
+            height: 964px;
+            left: 15px;
+            top: 99px;
+
+            background: #FFFFFF;
+            border-radius: 5px;
+        }
+
+        li {
+            list-style: none;
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 27px;
+            /* identical to box height */
+            color: #000000;
+        }
+
+        .rectangle2 {
+            position: absolute;
+            width: 1070px;
+            height: 100%;
+            left: 277px;
+            top: 0px;
+            background: #FFFFFF;
+            box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25);
+            border-radius: 10px;
+        }
+
+        .graph {
+            position: absolute;
+            width: 900px;
+            height: 80%;
+            left: 30px;
+            top: 100px;
+            border: 1px solid #010101;
+        }
+    </style>
 </head>
 
-<body>
-    <h1>
-        Data Visualization Page
-    </h1>
+<body style="background-color: #E5E5E5;">
+
+    <div class="Flex-container">
+        <div class="rectangle1">
+            <div class="data">Data</div>
+            <div class="search">
+                <input placeholder="search">
+            </div>
+            <div class="list-container">
+                <li>List 1</li>
+                <li>List 2</li>
+            </div>
+        </div>
+        <div class="rectangle2">
+            <!-- canvas Tag starts here -->
+            <canvas class="graph" id="historygraph">
+            </canvas>
+            <!-- canvas Tag ends here -->
+        </div>
+    </div>
+
+    <!-- <script src="script.js"></script> -->
 </body>
 
 </html>
